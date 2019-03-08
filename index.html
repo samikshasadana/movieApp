@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="style.css" rel="stylesheet" />
     <title> working with javascript DOM</title>
     </head>
@@ -12,7 +13,8 @@
             <h1 class="title">Moviemania</h1>
             <p>Movies for everyone</p>
             <form id="search-movies">
-               <input type="text" placeholder="Search movies....."/>
+               <input type="text" id="myInput" onkeyup="myFunction()" 
+placeholder="Search movies....."/>
                </form>
             </div>
            </header>
@@ -32,11 +34,12 @@
                </ul>
            </div>
            <form id="add-movie">
-           <input type="checkbox" id="hide"/>
+           <input onclick="myFunction_hide()" type="checkbox" id="hide"/>
            <label for="hide">Hide the list</label>
            <input type="text" placeholder="Add a moviee...."/>
            <button>Add</button>
            </form>
        </div>
+       <script src="app.js"></script>
     </body>
 </html>
